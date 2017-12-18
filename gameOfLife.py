@@ -19,8 +19,11 @@ def reDrawAll():
     for row in range(0,10):
         for col in range(0,10):
             if board[row][col] == 0:
-                sprite(
-            sprite(board[row][col],' ',end = '') #end is keyword
+                sprite(whiteSquare)
+            if board[row][col] == 1:
+                sprite(blackSquare)
+                
+#sprite(board[row][col],' ',end = '') #end is keyword
 
 
 
