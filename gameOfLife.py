@@ -4,6 +4,13 @@
 
 from ggame import *
 
+white = Color(0xFFFFFF,1)
+black = Color(0x000000,1)
+blackOutline = LineStyle(1,black)
+
+whiteSquare = RectangleAsset(50,50,blackOutline,white) 
+blackSquare = RectangleAsset(50,50,blackOutline,black)
+
 #buildBoard
 def buildBoard():
     return [['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,]
@@ -11,7 +18,8 @@ def buildBoard():
 def reDrawAll():
     for row in range(0,10):
         for col in range(0,10):
-            if board
+            if board[row][col] == 0:
+                sprite(
             sprite(board[row][col],' ',end = '') #end is keyword
 
 
