@@ -18,9 +18,9 @@ def buildBoard():
 def reDrawAll():
     for row in range(0,10):
         for col in range(0,10):
-            if board[row][col] == 0:
+            if data['Board'][row][col] == 0:
                 sprite(whiteSquare,(300,100))
-            if board[row][col] == 1:
+            if data['Board'][row][col] == 1:
                 sprite(blackSquare,(300,200))
                 
 #sprite(board[row][col],' ',end = '') #end is keyword
@@ -30,12 +30,12 @@ def reDrawAll():
 
 if __name__ == '__main__':
     
-    buildBoard()
-    reDrawAll()
     
     data = {}
     data['Board'] = buildBoard()
     data['frames'] = 0
+    
+    reDrawAll()
 
 
-App().run()
+    App().run()
