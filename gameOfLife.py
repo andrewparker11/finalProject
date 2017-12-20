@@ -23,6 +23,8 @@ def reDrawAll():
             if data['Board'][row][col] == 1:
                 Sprite(blackSquare,(30*row+300,30*col+100))
     
+def mouseclick():
+    
 
 
 #sprite(board[row][col],' ',end = '') #end is keyword
