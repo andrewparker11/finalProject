@@ -19,9 +19,9 @@ def reDrawAll():
     for row in range(0,10):
         for col in range(0,10):
             if data['Board'][row][col] == '0':
-                Sprite(whiteSquare,(30*row+100,30*col+64))
+                Sprite(whiteSquare,(30*row,30*col))
             if data['Board'][row][col] == 1:
-                Sprite(blackSquare,(30*row+100,30*col+64))
+                Sprite(blackSquare,(30*row,30*col))
     
 
 
