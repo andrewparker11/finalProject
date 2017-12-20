@@ -30,6 +30,9 @@ def reDrawAll():
 
 if __name__ == '__main__':
     
+    buildBoard()
+    reDrawAll()
+    
     data = {}
     data['Board'] = buildBoard()
     data['frames'] = 0
