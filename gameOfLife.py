@@ -8,8 +8,8 @@ white = Color(0xFFFFFF,1)
 black = Color(0x000000,1)
 blackOutline = LineStyle(1,black)
 
-whiteSquare = RectangleAsset(50,50,blackOutline,white) 
-blackSquare = RectangleAsset(50,50,blackOutline,black)
+whiteSquare = RectangleAsset(20,20,blackOutline,white) 
+blackSquare = RectangleAsset(20,20,blackOutline,black)
 
 #buildBoard
 def buildBoard():
@@ -21,9 +21,9 @@ def reDrawAll():
     for row in range(0,10):
         for col in range(0,10):
             if data['Board'][row][col] == '0':
-                Sprite(whiteSquare,(300+(50*x),100+(50)))
+                Sprite(whiteSquare,(300+(20*x),100+(20)))
             if data['Board'][row][col] == 1:
-                Sprite(blackSquare,(300+(50*x),200+(50)))
+                Sprite(blackSquare,(300+(20*x),200+(20)))
         x = x + 1
         y = y + 1
 
