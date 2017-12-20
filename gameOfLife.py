@@ -18,10 +18,10 @@ def buildBoard():
 def reDrawAll():
     for row in range(0,10):
         for col in range(0,10):
-            if data['Board'][row][col] == 0:
-                sprite(whiteSquare,(300,100))
+            if data['Board'][row][col] == '0':
+                Sprite(whiteSquare,(300,100))
             if data['Board'][row][col] == 1:
-                sprite(blackSquare,(300,200))
+                Sprite(blackSquare,(300,200))
                 
 #sprite(board[row][col],' ',end = '') #end is keyword
 
