@@ -16,13 +16,17 @@ def buildBoard():
     return [['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,]
      
 def reDrawAll():
+x = 0 
+y = 0
     for row in range(0,10):
         for col in range(0,10):
             if data['Board'][row][col] == '0':
-                Sprite(whiteSquare,(300,100))
+                Sprite(whiteSquare,(300+(50*x),100+(50*y)))
             if data['Board'][row][col] == 1:
-                Sprite(blackSquare,(300,200))
-                
+                Sprite(blackSquare,(300+(50*x),200+(50*y)))
+x = x + 1
+y = y + 1
+
 #sprite(board[row][col],' ',end = '') #end is keyword
 
 
