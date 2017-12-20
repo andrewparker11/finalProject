@@ -18,14 +18,16 @@ def buildBoard():
 def reDrawAll():
     x = 0 
     y = 0
+    n = 0 
     for row in range(0,10):
         for col in range(0,10):
             if data['Board'][row][col] == '0':
-                Sprite(whiteSquare,(300+(30*x),100+(30)))
+                Sprite(whiteSquare,((300+30*n ) + (30*x), (100+30*n ) + (30*y) ))
             if data['Board'][row][col] == 1:
                 Sprite(blackSquare,(300+(30*x),200+(30)))
         x = x + 1
         y = y + 1
+        n = n + 1
 
 
 #sprite(board[row][col],' ',end = '') #end is keyword
