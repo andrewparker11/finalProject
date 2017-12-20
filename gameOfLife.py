@@ -16,8 +16,8 @@ def buildBoard():
     return [['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,]
      
 def reDrawAll():
-x = 0 
-y = 0
+    x = 0 
+    y = 0
     for row in range(0,10):
         for col in range(0,10):
             if data['Board'][row][col] == '0':
