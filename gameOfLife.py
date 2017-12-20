@@ -21,9 +21,9 @@ def reDrawAll():
     for row in range(0,10):
         for col in range(0,10):
             if data['Board'][row][col] == '0':
-                Sprite(whiteSquare,(300+(50*x),100+(50*y)))
+                Sprite(whiteSquare,(300+(50*x),100+(50)))
             if data['Board'][row][col] == 1:
-                Sprite(blackSquare,(300+(50*x),200+(50*y)))
+                Sprite(blackSquare,(300+(50*x),200+(50)))
         x = x + 1
         y = y + 1
 
