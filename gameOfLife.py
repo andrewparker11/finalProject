@@ -24,8 +24,9 @@ y = 0
                 Sprite(whiteSquare,(300+(50*x),100+(50*y)))
             if data['Board'][row][col] == 1:
                 Sprite(blackSquare,(300+(50*x),200+(50*y)))
-x = x + 1
-y = y + 1
+        x = x + 1
+        y = y + 1
+
 
 #sprite(board[row][col],' ',end = '') #end is keyword
 
