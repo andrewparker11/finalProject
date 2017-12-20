@@ -24,7 +24,7 @@ def reDrawAll():
             if data['Board'][row][col] == '0':
                 Sprite(whiteSquare,(30*row+100,30*col+64))
             if data['Board'][row][col] == 1:
-                Sprite(blackSquare,(40*row+100,40*col+64))
+                Sprite(blackSquare,(30*row+100,30*col+64))
         x = x + 1
         y = y + 1
         n = n + 1
