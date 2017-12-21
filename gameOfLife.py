@@ -34,7 +34,6 @@ def mouseclick():
 
 if __name__ == '__main__':
     
-    
     data = {}
     data['Board'] = buildBoard()
     data['frames'] = 0
