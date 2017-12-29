@@ -19,9 +19,9 @@ def reDrawAll():
     for row in range(0,10):
         for col in range(0,10):
             if data['Board'][row][col] == '0':
-                Sprite(whiteSquare,(30*row,30*col))
+                Sprite(whiteSquare,(30*row+300,30*col+100))
             if data['Board'][row][col] == 1:
-                Sprite(blackSquare,(30*row,30*col))
+                Sprite(blackSquare,(30*row+300,30*col+100))
     
     
 def mouseclick():
@@ -56,3 +56,4 @@ if __name__ == '__main__':
 
 
     App().run()
+    App().listenMouseEvent('click',mouseClick)
