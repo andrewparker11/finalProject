@@ -25,22 +25,22 @@ def reDrawAll():
     
     
 def mouseclick():
-    if event.x > 0 and event.x < 40 and event.y > 0 and event.y < 40:
+    if event.x > 0 and event.x < 30 and event.y > 0 and event.y < 30:
         Sprite(blackSquare,(0,0))
-    elif event.x > 0 and event.x < 40 and event.y > 40 and event.y < 80:
-        Sprite(blackSquare,(0,40))
-    elif event.x > 0 and event.x < 40 and event.y > 80 and event.y < 120:
-        Sprite(blackSquare,(0,80))
-    elif event.x > 0 and event.x < 40 and event.y > 120 and event.y < 160:
+    elif event.x > 0 and event.x < 30 and event.y > 30 and event.y < 60:
+        Sprite(blackSquare,(0,30))
+    elif event.x > 0 and event.x < 30 and event.y > 60 and event.y < 90:
+        Sprite(blackSquare,(0,60))
+    elif event.x > 0 and event.x < 30 and event.y > 90 and event.y < 120:
+        Sprite(blackSquare,(0,90))
+    elif event.x > 0 and event.x < 30 and event.y > 120 and event.y < 150:
         Sprite(blackSquare,(0,120))
-    elif event.x > 0 and event.x < 40 and event.y > 160 and event.y < 200:
-        Sprite(blackSquare,(0,160))
-    elif event.x > 0 and event.x < 40 and event.y > 200 and event.y < 240:
-        Sprite(blackSquare,(0,200))
-    elif event.x > 0 and event.x < 40 and event.y > 240 and event.y < 280:
-        Sprite(blackSquare,(0,240))
-    elif event.x > 0 and event.x < 40 and event.y > 280 and event.y < 320:
-        Sprite(blackSquare,(0,280))
+    elif event.x > 0 and event.x < 30 and event.y > 150 and event.y < 180:
+        Sprite(blackSquare,(0,150))
+    elif event.x > 0 and event.x < 30 and event.y > 180 and event.y < 210:
+        Sprite(blackSquare,(0,180))
+    elif event.x > 0 and event.x < 30 and event.y > 210 and event.y < 240:
+        Sprite(blackSquare,(0,210))
 
 #sprite(board[row][col],' ',end = '') #end is keyword
 
