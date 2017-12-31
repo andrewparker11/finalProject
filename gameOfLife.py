@@ -13,7 +13,7 @@ blackSquare = RectangleAsset(30,30,blackOutline,black)
 
 #buildBoard
 def buildBoard():
-    return [['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,['0']*20,]
+    return [['0']*10,['0']*10,['0']*10,['0']*10,['0']*10,['0']*10,['0']*10,['0']*10,['0']*10,['0']*10,]
      
 def reDrawAll():
     for row in range(0,10):
