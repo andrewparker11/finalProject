@@ -24,7 +24,7 @@ def reDrawAll():
                 Sprite(blackSquare,(30*row,30*col))
     
     
-def mouseClick():
+def mouseClick(event):
     if event.x > 0 and event.x < 30 and event.y > 0 and event.y < 30:
         Sprite(blackSquare,(0,0))
  
