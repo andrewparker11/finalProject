@@ -25,9 +25,9 @@ def reDrawAll():
     
     
 def mouseClick(event):
-    rx = event.x/5000 
-    ry = event.y/5000
-
+    rx = event.x//50 
+    ry = event.y//50
+    data['Board'][rx][ry] = 1
     
  
 #if event.x > 0 and event.x < 50 and event.y > 0 and event.y < 50: Sprite(blackSquare,(0,0))
