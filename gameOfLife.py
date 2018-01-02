@@ -58,7 +58,7 @@ n = 0
             
     
 def nextGeneration():
-    
+    data['Board'][row][col]
 """
 
 
