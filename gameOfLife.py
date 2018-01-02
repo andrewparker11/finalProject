@@ -30,9 +30,6 @@ def mouseClick(event):
 
     
  
- 
- 
-    
 #if event.x > 0 and event.x < 50 and event.y > 0 and event.y < 50: Sprite(blackSquare,(0,0))
         
         
