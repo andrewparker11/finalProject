@@ -2,6 +2,12 @@
 #Dec.15,2017
 #Game of Life by John Conway
 
+#Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.
+#Any live cell with two or three live neighbours lives on to the next generation.
+#Any live cell with more than three live neighbours dies, as if by overpopulation.
+#Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
+
+
 from ggame import *
 
 white = Color(0xFFFFFF,1)
@@ -20,20 +26,34 @@ def reDrawAll():
         for col in range(0,10):
             if data['Board'][row][col] == '0':
                 Sprite(whiteSquare,(50*row,50*col))
-            if data['Board'][row][col] == '1':
+            if data['Board'][row][col] == 1:
                 Sprite(blackSquare,(50*row,50*col))
     
     
 def mouseClick(event):
     rx = event.x//50 
     ry = event.y//50
-    data['Board'][rx][ry] = '1'
+    data['Board'][rx][ry] = 1
 
+"""
 def numNeighbors():
-    
+n = 0
+    if data['Board'][row][col] == '1':
+        if data['Board'][row+50][col] == '1':
+            n = n+1
+        elif data['Board'][row-50][col] == '1':
+            n = n+1
+        elif data['Board'][row][col+50] == '1':
+            n = n+1
+        elif data['Board'][row][col-50] == '1':
+            n = n+1
+        elif data['Board'][row][col-50] == '1':
+            n = n+1
+            
     
 def nextGeneration():
-
+    
+"""
 
 
 #sprite(board[row][col],' ',end = '') #end is keyword
@@ -47,7 +67,6 @@ if __name__ == '__main__':
     data['frames'] = 0
     
     reDrawAll()
-    numNeighbors()
 
     App().run()
     App().listenMouseEvent('click',mouseClick)
