@@ -28,12 +28,7 @@ def mouseClick(event):
     rx = event.x//50 
     ry = event.y//50
     data['Board'][rx][ry] = 1
-    
- 
-#if event.x > 0 and event.x < 50 and event.y > 0 and event.y < 50: Sprite(blackSquare,(0,0))
-        
-        
- 
+
 
 #sprite(board[row][col],' ',end = '') #end is keyword
 
@@ -43,7 +38,7 @@ if __name__ == '__main__':
     
     data = {}
     data['Board'] = buildBoard()
-#data['frames'] = 0
+    data['frames'] = 0
     
     reDrawAll()
 
