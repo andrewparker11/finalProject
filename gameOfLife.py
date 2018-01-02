@@ -25,9 +25,10 @@ def reDrawAll():
     
     
 def mouseClick(event):
-    rx = event.x/500 
-    ry = event.y/500
-    Sprite(blackSquare,(10*rx,10*ry))
+    rx = event.x/5000 
+    ry = event.y/5000
+
+    
  
  
  
