@@ -47,7 +47,13 @@ n = 0
             n = n+1
         elif data['Board'][row][col-50] == '1':
             n = n+1
-        elif data['Board'][row][col-50] == '1':
+        elif data['Board'][row+50][col-50] == '1':
+            n = n+1
+        elif data['Board'][row-50][col-50] == '1':
+            n = n+1
+        elif data['Board'][row+50][col+50] == '1':
+            n = n+1
+        elif data['Board'][row-50][col+50] == '1':
             n = n+1
             
     
