@@ -59,9 +59,10 @@ def numNeighbors(row,col):
     
 
 def nextGeneration():
-    numNeighbors(row,col)
+    
     for row in range(0,10):
-        for col in range(0,10):
+        for col in range(0,10): 
+            n = numNeighbors(row,col)
             if n < 2: 
                 data['Board'][row][col] == '0'
         #if n == 2: lives do I even need it 
@@ -69,7 +70,11 @@ def nextGeneration():
                 data['Board'][row][col] == '0'
             if n == 3:
                 data['Board'][row][col] == '1'
-
+    for:
+        if data['Board'][row][col] == '0':
+            Sprite(whiteSquare,(50*row,50*col))
+        if data['Board'][row][col] == 1:
+            Sprite(blackSquare,(50*row,50*col))
 
 #sprite(board[row][col],' ',end = '') #end is keyword
 
