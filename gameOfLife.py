@@ -36,28 +36,28 @@ def mouseClick(event):
     data['Board'][rx][ry] = 1
     \reDrawAll()
 
-"""
 
 def numNeighbors(row,col):
     n = 0
     if data['Board'][row+1][col] == '1':
-            n = n+1
+        n = n+1
     elif data['Board'][row-1][col] == '1':
-            n = n+1
+        n = n+1
     elif data['Board'][row][col+1] == '1':
-            n = n+1
-        elif data['Board'][row][col-1] == '1':
-            n = n+1
-        elif data['Board'][row-1][col-1] == '1':
-            n = n+1
-        elif data['Board'][row-1][col-1] == '1':
-            n = n+1
-        elif data['Board'][row+1][col+1] == '1':
-            n = n+1
-        elif data['Board'][row-1][col+1] == '1':
-            n = n+1
+        n = n+1
+    elif data['Board'][row][col-1] == '1':
+        n = n+1
+    elif data['Board'][row-1][col-1] == '1':
+        n = n+1
+    elif data['Board'][row-1][col-1] == '1':
+        n = n+1
+    elif data['Board'][row+1][col+1] == '1':
+        n = n+1
+    elif data['Board'][row-1][col+1] == '1':
+        n = n+1
     return n
     
+"""
 def nextGeneration():
     for n in data['Board'][row][col] == '1':
         if n < 2: 
