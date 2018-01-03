@@ -34,7 +34,7 @@ def mouseClick(event):
     rx = event.x//50 
     ry = event.y//50
     data['Board'][rx][ry] = 1
-    \reDrawAll()
+    reDrawAll()
 
 
 def numNeighbors(row,col):
