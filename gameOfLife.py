@@ -60,15 +60,15 @@ def numNeighbors(row,col):
 
 def nextGeneration():
     numNeighbors(row,col)
-    for n in data['Board'][row][col] == '1':
-        if n < 2: 
-            data['Board'][row][col] == '0'
+    for row in range(0,10):
+        for col in range(0,10):
+            if n < 2: 
+                data['Board'][row][col] == '0'
         #if n == 2: lives do I even need it 
-        if n == 3: 
-            data['Board'][row][col] == '0'
-    for n in data['Board'][row][col] == '0':
-        if n == 3:
-            data['Board'][row][col] == '1'
+            if n == 3: 
+                data['Board'][row][col] == '0'
+            if n == 3:
+                data['Board'][row][col] == '1'
 
 
 #sprite(board[row][col],' ',end = '') #end is keyword
