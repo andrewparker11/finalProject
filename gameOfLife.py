@@ -34,30 +34,29 @@ def mouseClick(event):
     rx = event.x//50 
     ry = event.y//50
     data['Board'][rx][ry] = 1
-    reDrawAll()
+    \reDrawAll()
 
 """
 
-def numNeighbors():
-n = 0
-    for data['Board'][row][col] == '1' or data['Board'][row][col] == '0':
-        if data['Board'][row+50][col] == '1':
+def numNeighbors(row,col):
+    n = 0
+    if data['Board'][row+1][col] == '1':
             n = n+1
-        elif data['Board'][row-50][col] == '1':
+    elif data['Board'][row-1][col] == '1':
             n = n+1
-        elif data['Board'][row][col+50] == '1':
+    elif data['Board'][row][col+1] == '1':
             n = n+1
-        elif data['Board'][row][col-50] == '1':
+        elif data['Board'][row][col-1] == '1':
             n = n+1
-        elif data['Board'][row+50][col-50] == '1':
+        elif data['Board'][row-1][col-1] == '1':
             n = n+1
-        elif data['Board'][row-50][col-50] == '1':
+        elif data['Board'][row-1][col-1] == '1':
             n = n+1
-        elif data['Board'][row+50][col+50] == '1':
+        elif data['Board'][row+1][col+1] == '1':
             n = n+1
-        elif data['Board'][row-50][col+50] == '1':
+        elif data['Board'][row-1][col+1] == '1':
             n = n+1
-            
+    return n
     
 def nextGeneration():
     for n in data['Board'][row][col] == '1':
