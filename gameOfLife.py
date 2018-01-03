@@ -57,8 +57,9 @@ def numNeighbors(row,col):
         n = n+1
     return n
     
-"""
+
 def nextGeneration():
+    numNeighbors(row,col)
     for n in data['Board'][row][col] == '1':
         if n < 2: 
             data['Board'][row][col] == '0'
@@ -68,7 +69,8 @@ def nextGeneration():
     for n in data['Board'][row][col] == '0':
         if n == 3:
             data['Board'][row][col] == '1'
-"""
+
+
 #sprite(board[row][col],' ',end = '') #end is keyword
 
 
