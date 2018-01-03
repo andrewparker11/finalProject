@@ -39,7 +39,7 @@ def mouseClick(event):
 """
 def numNeighbors():
 n = 0
-    if data['Board'][row][col] == '1':
+    if data['Board'][row][col] == '1' or data['Board'][row][col] == '0':
         if data['Board'][row+50][col] == '1':
             n = n+1
         elif data['Board'][row-50][col] == '1':
@@ -59,8 +59,14 @@ n = 0
             
     
 def nextGeneration():
-    data['Board'][row][col]
-"""
+    for n in data['Board'][row][col] == '1':
+        if n < 2: dies
+        if n == 2: lives
+        if n == 3: dies
+    for n in data['Board'][row][col] == '0':
+        if n == 3: reproduces
+        
+            
 
 
 #sprite(board[row][col],' ',end = '') #end is keyword
