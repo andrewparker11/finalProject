@@ -37,6 +37,7 @@ def mouseClick(event):
     reDrawAll()
 
 """
+
 def numNeighbors():
 n = 0
     if data['Board'][row][col] == '1' or data['Board'][row][col] == '0':
@@ -67,8 +68,7 @@ def nextGeneration():
         if n == 3: reproduces
         
             
-
-
+"""
 #sprite(board[row][col],' ',end = '') #end is keyword
 
 
