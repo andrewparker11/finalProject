@@ -54,19 +54,19 @@ def numNeighbors(row,col):
     
     if row<9 and data['Board'][row+1][col] == '1':
         n = n+1
-    elif data['Board'][row-1][col] == '1':
+    elif row>0 and data['Board'][row-1][col] == '1':
         n = n+1
-    elif data['Board'][row][col+1] == '1':
+    elif col<9 and data['Board'][row][col+1] == '1':
         n = n+1
-    elif data['Board'][row][col-1] == '1':
+    elif col>0 and data['Board'][row][col-1] == '1':
         n = n+1
-    elif data['Board'][row-1][col-1] == '1':
+    elif row>0 and col>0 and data['Board'][row-1][col-1] == '1':
         n = n+1
-    elif data['Board'][row-1][col-1] == '1':
+    elif row<9 and col<9 and data['Board'][row+1][col+1] == '1':
         n = n+1
-    elif data['Board'][row+1][col+1] == '1':
+    elif row<9 and col>0 and data['Board'][row+1][col-1] == '1':
         n = n+1
-    elif data['Board'][row-1][col+1] == '1':
+    elif row>0 and col<9 and data['Board'][row-1][col+1] == '1':
         n = n+1
     return n
     
