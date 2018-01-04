@@ -40,7 +40,7 @@ def mouseClick(event):
     if event.x > 550 and event.x < 650:
         if event.y > 400 and event.y < 450:
             nextGeneration()
-    else:    
+    else:
         rx = event.x//50 
         ry = event.y//50
         data['Board'][rx][ry] = '1'
@@ -80,7 +80,6 @@ def nextGeneration():
                 data['Board2'][row][col] = '0'
             if n == 2:
                 data['Board2'][row][col] = '1'
-        #if n == 2: lives do I even need it 
             if n == 3 and data['Board'][row][col] == '1': 
                 data['Board2'][row][col] = '0'
             if n == 3 and data['Board'][row][col] == '0':
