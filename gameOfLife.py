@@ -76,14 +76,16 @@ def nextGeneration():
     for row in range(0,10):
         for col in range(0,10): 
             n = numNeighbors(row,col)
-            if n < 2: 
+            if data['Board'][row][col] == '1':
+                if n < 2: 
                 data['Board2'][row][col] = '0'
-            if n == 2:
-                data['Board2'][row][col] = '1'
-            if n == 3 and data['Board'][row][col] == '1': 
-                data['Board2'][row][col] = '0'
-            if n == 3 and data['Board'][row][col] == '0':
-                data['Board2'][row][col] = '1'
+                if n == 2:
+                    data['Board2'][row][col] = '1'
+                if n == 3: 
+                    data['Board2'][row][col] = '0'
+            if data['Board'][row][col] == '0':
+                if n == 3:
+                    data['Board2'][row][col] = '1'
             
     data['Board'] = data['Board2']
                 
