@@ -34,7 +34,7 @@ def reDrawAll():
                 Sprite(blackSquare,(50*row,50*col))
             
             Sprite(textBox,(550,400))
-            Sprite(startText,(550,400))
+            Sprite(startText,(575,405))
     
 def mouseClick(event):
     rx = event.x//50 
