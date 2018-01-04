@@ -76,10 +76,12 @@ def nextGeneration():
                 data['Board2'][row][col] == '0'
             if n == 3 and data['Board'][row][col] == '0':
                 data['Board2'][row][col] == '1'
+            
+            data['Board'][row][col] = data['Board2'][row][col]
                 
 #Set Old matrix to new matrix 
 
-data['Board2'][row][col] = data['Board'][row][col]
+
 
 
 if __name__ == '__main__':
