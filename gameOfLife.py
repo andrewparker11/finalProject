@@ -51,7 +51,8 @@ def mouseClick(event):
 
 def numNeighbors(row,col):
     n = 0
-    if data['Board'][row+1][col] == '1':
+    
+    if row<9 and data['Board'][row+1][col] == '1':
         n = n+1
     elif data['Board'][row-1][col] == '1':
         n = n+1
