@@ -78,10 +78,8 @@ def nextGeneration():
                 data['Board2'][row][col] == '1'
                 
 #Set Old matrix to new matrix 
+
 data['Board2'][row][col] = data['Board'][row][col]
-
-#sprite(board[row][col],' ',end = '') #end is keyword
-
 
 
 if __name__ == '__main__':
