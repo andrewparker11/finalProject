@@ -37,15 +37,17 @@ def reDrawAll():
             Sprite(startText,(575,405))
     
 def mouseClick(event):
-    rx = event.x//50 
-    ry = event.y//50
-    data['Board'][rx][ry] = '1'
-    reDrawAll()
-    
     if event.x > 550 and event.x < 650:
         if event.y > 400 and event.y < 450:
             numNeigbors(row,col) 
             nextGeneration()
+    else:    
+        rx = event.x//50 
+        ry = event.y//50
+        data['Board'][rx][ry] = '1'
+        reDrawAll()
+    
+    
 
 
 def numNeighbors(row,col):
