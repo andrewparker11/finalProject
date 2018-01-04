@@ -47,8 +47,6 @@ def mouseClick(event):
         reDrawAll()
     
     
-
-
 def numNeighbors(row,col):
     n = 0
     
