@@ -17,7 +17,7 @@ blackOutline = LineStyle(1,black)
 whiteSquare = RectangleAsset(50,50,blackOutline,white) 
 blackSquare = RectangleAsset(50,50,blackOutline,black)
 textBox =  RectangleAsset(100,50,blackOutline,white) 
-#startText
+startText = TextAsset('start',fill=black,style='bold 20pt Times')
 
 #buildBoard
 def buildBoard():
@@ -34,6 +34,7 @@ def reDrawAll():
                 Sprite(blackSquare,(50*row,50*col))
             
             Sprite(textBox,(550,400))
+            Sprite(startText,(550,400))
     
 def mouseClick(event):
     rx = event.x//50 
