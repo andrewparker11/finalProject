@@ -62,25 +62,23 @@ def numNeighbors(row,col):
 
 def nextGeneration():
 #Create new matrix vvvv
-    for row in range(0,10):
-        for col in range(0,10):
-            if data['Board'][row][col] == '0':
-                Sprite(whiteSquare,(50*row,50*col))
-            if data['Board'][row][col] == 1:
-                Sprite(blackSquare,(50*row,50*col))
-#New stuff ^^^^
+    reDrawAll()
+                
     for row in range(0,10):
         for col in range(0,10): 
             n = numNeighbors(row,col)
             if n < 2: 
-                data['Board'][row][col] == '0'
+                data['Board2'][row][col] == '0'
+            if n == 2:
+                data['Board2'][row][col] == '1'
         #if n == 2: lives do I even need it 
-            if n == 3: 
-                data['Board'][row][col] == '0'
-            if n == 3:
-                data['Board'][row][col] == '1'
+            if n == 3 and data['Board'][row][col] == '1': 
+                data['Board2'][row][col] == '0'
+            if n == 3 and data['Board'][row][col] == '0':
+                data['Board2'][row][col] == '1'
+                
 #Set Old matrix to new matrix 
-
+data['Board2'][row][col] = data['Board'][row][col]
 
 #sprite(board[row][col],' ',end = '') #end is keyword
 
@@ -90,7 +88,8 @@ if __name__ == '__main__':
     
     data = {}
     data['Board'] = buildBoard()
-    
+    data['Board2'] = buildBoard()
+
     reDrawAll()
 
     App().run()
