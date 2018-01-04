@@ -41,8 +41,8 @@ def mouseClick(event):
         for col in range(0,10):
             if event.x > 550 and event.x < 650:
                 if event.y > 400 and event.y < 450:
-                numNeighbors(row,col) 
-                nextGeneration()
+                    numNeighbors(row,col) 
+                    nextGeneration()
         else:    
             rx = event.x//50 
             ry = event.y//50
