@@ -39,7 +39,6 @@ def reDrawAll():
 def mouseClick(event):
     if event.x > 550 and event.x < 650:
         if event.y > 400 and event.y < 450:
-            numNeighbors(row,col) 
             nextGeneration()
     else:    
         rx = event.x//50 
