@@ -22,6 +22,8 @@ def buildBoard():
     return [['0']*10,['0']*10,['0']*10,['0']*10,['0']*10,['0']*10,['0']*10,['0']*10,['0']*10,['0']*10,]
      
 def reDrawAll():
+    for item in App().spritelist[:]:
+        item.destroy()
     for row in range(0,10):
         for col in range(0,10):
             if data['Board'][row][col] == '0':
@@ -59,7 +61,14 @@ def numNeighbors(row,col):
     
 
 def nextGeneration():
-    
+#Create new matrix vvvv
+    for row in range(0,10):
+        for col in range(0,10):
+            if data['Board'][row][col] == '0':
+                Sprite(whiteSquare,(50*row,50*col))
+            if data['Board'][row][col] == 1:
+                Sprite(blackSquare,(50*row,50*col))
+#New stuff ^^^^
     for row in range(0,10):
         for col in range(0,10): 
             n = numNeighbors(row,col)
@@ -70,11 +79,8 @@ def nextGeneration():
                 data['Board'][row][col] == '0'
             if n == 3:
                 data['Board'][row][col] == '1'
-    for:
-        if data['Board'][row][col] == '0':
-            Sprite(whiteSquare,(50*row,50*col))
-        if data['Board'][row][col] == 1:
-            Sprite(blackSquare,(50*row,50*col))
+#Set Old matrix to new matrix 
+
 
 #sprite(board[row][col],' ',end = '') #end is keyword
 
