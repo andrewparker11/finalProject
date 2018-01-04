@@ -30,7 +30,7 @@ def reDrawAll():
         for col in range(0,10):
             if data['Board'][row][col] == '0':
                 Sprite(whiteSquare,(50*row,50*col))
-            if data['Board'][row][col] == 1:
+            if data['Board'][row][col] == '1':
                 Sprite(blackSquare,(50*row,50*col))
             
             Sprite(textBox,(550,400))
@@ -39,8 +39,13 @@ def reDrawAll():
 def mouseClick(event):
     rx = event.x//50 
     ry = event.y//50
-    data['Board'][rx][ry] = 1
+    data['Board'][rx][ry] = '1'
     reDrawAll()
+    
+    if event.x > 550 and event.x < 650:
+        if event.y > 400 and event.y < 450:
+            numNeigbors(row,col) 
+            nextGeneration()
 
 
 def numNeighbors(row,col):
@@ -83,10 +88,6 @@ def nextGeneration():
             
             data['Board'][row][col] = data['Board2'][row][col]
                 
-                
-
-
-
 
 
 if __name__ == '__main__':
