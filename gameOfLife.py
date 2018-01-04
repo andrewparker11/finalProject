@@ -30,7 +30,7 @@ def reDrawAll():
                 Sprite(whiteSquare,(50*row,50*col))
             if data['Board'][row][col] == 1:
                 Sprite(blackSquare,(50*row,50*col))
-    
+    Sprite(RectangleAsset(50,50,blackOutline,white))
     
 def mouseClick(event):
     rx = event.x//50 
@@ -79,7 +79,8 @@ def nextGeneration():
             
             data['Board'][row][col] = data['Board2'][row][col]
                 
-#Set Old matrix to new matrix 
+                
+
 
 
 
