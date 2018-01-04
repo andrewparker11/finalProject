@@ -72,24 +72,24 @@ def numNeighbors(row,col):
 
 def nextGeneration():
 #Create new matrix vvvv
-    reDrawAll()
+    data['Board2'] = buildBoard()
                 
     for row in range(0,10):
         for col in range(0,10): 
             n = numNeighbors(row,col)
             if n < 2: 
-                data['Board2'][row][col] == '0'
+                data['Board2'][row][col] = '0'
             if n == 2:
-                data['Board2'][row][col] == '1'
+                data['Board2'][row][col] = '1'
         #if n == 2: lives do I even need it 
             if n == 3 and data['Board'][row][col] == '1': 
-                data['Board2'][row][col] == '0'
+                data['Board2'][row][col] = '0'
             if n == 3 and data['Board'][row][col] == '0':
-                data['Board2'][row][col] == '1'
+                data['Board2'][row][col] = '1'
             
-            data['Board'][row][col] = data['Board2'][row][col]
+    data['Board'] = data['Board2']
                 
-
+    reDrawAll()
 
 if __name__ == '__main__':
     
