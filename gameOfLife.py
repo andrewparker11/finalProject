@@ -33,9 +33,9 @@ def reDrawAll():
             if data['Board'][row][col] == '1':
                 Sprite(blackSquare,(50*row,50*col))
             
-            Sprite(textBox,(550,400))
-            Sprite(startText,(575,405))
-    
+    Sprite(textBox,(550,400))
+    Sprite(startText,(575,405))
+
 def mouseClick(event):
     if event.x > 550 and event.x < 650:
         if event.y > 400 and event.y < 450:
@@ -52,19 +52,19 @@ def numNeighbors(row,col):
     
     if row<9 and data['Board'][row+1][col] == '1':
         n = n+1
-    elif row>0 and data['Board'][row-1][col] == '1':
+    if row>0 and data['Board'][row-1][col] == '1':
         n = n+1
-    elif col<9 and data['Board'][row][col+1] == '1':
+    if col<9 and data['Board'][row][col+1] == '1':
         n = n+1
-    elif col>0 and data['Board'][row][col-1] == '1':
+    if col>0 and data['Board'][row][col-1] == '1':
         n = n+1
-    elif row>0 and col>0 and data['Board'][row-1][col-1] == '1':
+    if row>0 and col>0 and data['Board'][row-1][col-1] == '1':
         n = n+1
-    elif row<9 and col<9 and data['Board'][row+1][col+1] == '1':
+    if row<9 and col<9 and data['Board'][row+1][col+1] == '1':
         n = n+1
-    elif row<9 and col>0 and data['Board'][row+1][col-1] == '1':
+    if row<9 and col>0 and data['Board'][row+1][col-1] == '1':
         n = n+1
-    elif row>0 and col<9 and data['Board'][row-1][col+1] == '1':
+    if row>0 and col<9 and data['Board'][row-1][col+1] == '1':
         n = n+1
     return n
     
