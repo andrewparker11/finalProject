@@ -82,6 +82,8 @@ def nextGeneration():
                 if n == 2:
                     data['Board2'][row][col] = '1'
                 if n == 3: 
+                    data['Board2'][row][col] = '1'
+                if n > 3:
                     data['Board2'][row][col] = '0'
             if data['Board'][row][col] == '0':
                 if n == 3:
