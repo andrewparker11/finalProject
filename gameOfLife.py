@@ -10,19 +10,23 @@
 
 from ggame import *
 
+#colors 
 white = Color(0xFFFFFF,1)
 black = Color(0x000000,1)
 blackOutline = LineStyle(1,black)
 
+#polygons, text
 whiteSquare = RectangleAsset(50,50,blackOutline,white) 
 blackSquare = RectangleAsset(50,50,blackOutline,black)
 textBox =  RectangleAsset(100,50,blackOutline,white) 
 startText = TextAsset('start',fill=black,style='bold 20pt Times')
 
-#buildBoard
+#Builds the Matrix for the Game
 def buildBoard():
     return [['0']*10,['0']*10,['0']*10,['0']*10,['0']*10,['0']*10,['0']*10,['0']*10,['0']*10,['0']*10,]
      
+
+#redraws the Board when next generation occurs and sprites the live or dead cells, also sprites start box
 def reDrawAll():
     for item in App().spritelist[:]:
         item.destroy()
@@ -36,6 +40,8 @@ def reDrawAll():
     Sprite(textBox,(550,400))
     Sprite(startText,(575,405))
 
+
+#Listens for mouseclick and sprites box where appropriate 
 def mouseClick(event):
     if event.x > 550 and event.x < 650:
         if event.y > 400 and event.y < 450:
@@ -46,7 +52,7 @@ def mouseClick(event):
         data['Board'][rx][ry] = '1'
         reDrawAll()
     
-    
+#counts the number of neighbors for living or dead clels
 def numNeighbors(row,col):
     n = 0
     
@@ -69,8 +75,8 @@ def numNeighbors(row,col):
     return n
     
 
+#lays out the rules for the next generation
 def nextGeneration():
-#Create new matrix vvvv
     data['Board2'] = buildBoard()
                 
     for row in range(0,10):
@@ -93,6 +99,7 @@ def nextGeneration():
                 
     reDrawAll()
 
+#runs the game
 if __name__ == '__main__':
     
     data = {}
